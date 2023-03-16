@@ -1,0 +1,45 @@
+/*
+* Hamburger stylings
+*/
+#hamburger {
+    position: fixed;
+}
+
+#hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+    top: 30px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background-color: black;
+    padding: 4px 4px;
+    cursor: pointer;
+}
+
+.bar{
+    background: white;
+    position: relative;
+    width: 80%;
+    height: 4px;
+    transition: all .3s ease-in;
+}
+
+#hamburger.open #bar1{
+    background-color: #fff;
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+#hamburger.open #bar2{
+    background-color: transparent;
+}
+
+#hamburger.open #bar3{
+    background-color: #fff;
+    transform: rotate(-45deg) translate(7px, -7px);
+}
